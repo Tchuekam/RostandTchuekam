@@ -29,6 +29,7 @@ Thumbs.db
 
 # Lock/pid/state files
 *.lock
+!uv.lock
 *.pid
 state.db
 state.db-shm

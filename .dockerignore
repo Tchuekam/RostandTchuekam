@@ -18,6 +18,7 @@ auth.json
 
 # State files
 *.lock
+!uv.lock
 *.pid
 state.db
 state.db-shm
