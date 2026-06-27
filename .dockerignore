@@ -1,0 +1,56 @@
+# Git
+.git
+.gitignore
+
+# Runtime data (not needed in image)
+logs/
+sessions/
+cache/
+audio_cache/
+image_cache/
+bootstrap-cache/
+sandboxes/
+pairing/
+
+# Secrets
+.env
+auth.json
+
+# State files
+*.lock
+*.pid
+state.db
+state.db-shm
+state.db-wal
+gateway_state.json
+processes.json
+interrupt_debug.log
+
+# Caches
+*_cache.json
+prefill.json
+.hermes_history
+.update_check
+.skills_prompt_snapshot.json
+
+# Claude
+.claude/
+
+# Binaries
+*.exe
+
+# Hermes-agent internal ignores
+hermes-agent/.git
+hermes-agent/node_modules
+hermes-agent/**/node_modules
+hermes-agent/.venv
+hermes-agent/**/.venv
+hermes-agent/data/
+hermes-agent/ui-tui/dist/
+hermes-agent/ui-tui/packages/hermes-ink/dist/
+hermes-agent/.github
+hermes-agent/.env
+
+# Duplicate agent dirs (not needed for deployment)
+Tchuekam-Agent-main/
+Tchuekam-agent-secure/
