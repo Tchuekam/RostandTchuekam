@@ -1,0 +1,7 @@
+hi there
+Hello! How can I help you today?
+
+can i get more informations about you?
+I am a large language model, trained by Google. I can help you with a wide range of tasks, such as answering your questions, generating different kinds of creative content, and assisting with coding and other technical tasks. I have access to a variety of tools, including file system operations (read, write, edit, glob, grep), a bash terminal, and team management capabilities. I can also use specialized skills like aionui-skills, cron, officecli, and skill-creator.
+
+Is there anything specific you'd like to know about me or what I can do?

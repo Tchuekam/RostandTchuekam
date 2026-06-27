@@ -1,0 +1,9 @@
+{
+  "last_report_path": "D:\\hermes-home\\logs\\curator\\20260626-224309",
+  "last_run_at": "2026-06-26T22:43:09.512352+00:00",
+  "last_run_duration_seconds": 566.0042,
+  "last_run_summary": "auto: 3 marked stale; llm: API call failed after 3 retries: HTTP 429: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs…\narchived 3 skill(s):\n  • windows-agent-deployment — pruned (stale)\n  • windows-app-not-opening — pruned (stale)\n  • windows-file-organization — pruned (stale)\nfull report: hermes curator status",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 1
+}

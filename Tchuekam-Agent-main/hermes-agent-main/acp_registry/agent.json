@@ -1,0 +1,14 @@
+{
+  "id": "tchuekam-agent",
+  "name": "Tchuekam Agent",
+  "version": "0.15.1",
+  "description": "Self-improving AI agent by Giantect Empire with ACP editor integration, persistent memory, skills, and rich tool support.",
+  "authors": ["Giantect Empire"],
+  "license": "MIT",
+  "distribution": {
+    "uvx": {
+      "package": "hermes-agent[acp]==0.15.1",
+      "args": ["hermes-acp"]
+    }
+  }
+}

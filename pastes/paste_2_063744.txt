@@ -1,0 +1,7 @@
+ Option 2: Any email via Himalaya + App Password (no API key, just a one-time password)
+
+    For Gmail/Outlook/Yahoo: you generate an App Password from your account settings (Settings → Security → App Passwords). This is NOT your regular password — it's a 16-char random string you generate specifically for this.
+
+    What it takes (you, ~2 minutes):
+    1. Go to your email provider's App Password settings
+    2. Generate one, paste it to me

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "out": "docs",
+  "json": "docs/typedoc-output.json",
+  "name": "Project Documentation",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "excludeExternals": true,
+  "excludeInternal": false,
+  "readme": "README.md",
+  "tsconfig": "tsconfig.json",
+  "categorizeByGroup": true,
+  "categoryOrder": [
+    "*"
+  ],
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": true
+  },
+  "visibilityFilters": {
+    "protected": true,
+    "inherited": true
+  },
+  "plugin": [],
+  "theme": "default",
+  "hideGenerator": true,
+  "searchInComments": true
+}

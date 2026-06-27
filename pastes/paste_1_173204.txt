@@ -1,0 +1,36 @@
+refine this markiting script fo my facebook marketing campaign  Chaque développeur, marketeur, freelance — et honnêtement, chaque être humain — a
+   déjà connu ce moment où l'on réalise qu'on passe plus de temps à gérer son travail qu'à le faire réellement. Vous voyez exactement de quoi je
+   parle : répondre à des e-mails et message whatsapp inutiles, envoyer des rapports de fin de journée, mettre à jour des feuilles de calcul, ou simplement essayer de
+   rester à jour avec tout ce qui se passe dans le monde aujourd'hui.
+
+   **** Chacune de ces tâches prend environ cinq minutes. Rien de bien grave, n'est-ce pas ? Faux. Même si vous n'avez que cinq de ces tâches par
+   jour, multipliées par 5 minutes, par 5 jours de la semaine, par 52 semaines de  l’annees... cela finit par représenter plus de 100 heures par an perdues
+   dans des tâches répétitives.
+
+   **** C’est l'équivalent de presque trois semaines de travail complètes gâchées. Ce n'est plus de la productivité ; c'est juste du baby-sitting
+   numérique.
+
+   **** Salut, je m'appelle TchueKam, et aujourd'hui je vais vous montrer comment briser ce cycle une bonne fois pour toutes grâce à TchueKamUI. Parce qu'au
+   lieu de répéter les mêmes tâches fastidieuses et rébarbatives jour après jour, vous pouvez apprendre à votre ordinateur à les faire pour vous.
+
+   **** Imaginez ceci : vos nouveaux e-mails sont automatiquement triés par priorité, des brouillons de réponse sont rédigés pour vous et
+   n'attendent que votre validation, et vous recevez des alertes instantanées dès qu'un message important arrive dans votre boîte de réception.
+   C'est ça, l'automation. Elle s'occupe des corvées pour que vous puissiez vous concentrer sur ce qui fait vraiment avancer votre activité.
+
+   **** Bien sûr, vous avez peut-être déjà essayé d'automatiser votre vie par le passé. Vous avez peut-être utilisé des outils qui vous
+   promettaient la liberté, mais au lieu de ça, vous avez passé plus de temps à réparer vos automatisations qu'à faire du vrai travail. Ça a
+   fonctionné un temps... jusqu'au jour où ça a cassé. On est tous passés par là.
+
+   **** Et puis, il y a cette application qui vous limite à seulement 100 exécutions par mois, ou celle qui cache une logique simple derrière un
+   abonnement payant, ou pire encore, qui qualifie la "personnalisation" de fonctionnalité avancée.
+   **** Soyons réalistes : vous ne rentabilisez pas non plus cet investissement en essayant de la vendre. Entre le jouet "no-code" trop basique
+   d'un côté et le monstre de code sur mesure de l'autre, il y a toujours eu un fossé immense. C'était soit trop simple, soit beaucoup trop
+   complexe. Il n'existait aucun outil assez puissant pour les développeurs, assez simple pour tous les autres, et assez ouvert pour qu'il vous
+   appartienne réellement... jusqu'à aujourd'hui.
+
+   **** TchueKamUI est un outil d'automatisation visuelle qui rend la création de flux de travail simple et intuitive.TchueKamUI signifie Unified Intelligent Intergration
+C'est une plateforme d'automatisation visuelle et par text qui vous permet de connecter des applications, des API et de la logique de manière totalement visuelle et orale
+
+   **** En réalité, vous passerez plus de temps à réfléchir à ce que vous voulez en faire qu'à le construire. C'est comme si toutes vos
+   applications se mettaient à discuter entre elles exactement de la manière dont vous l'avez décidé.
+   l'auto-héberger (self-host), le modifier et le faire évoluer comme bon vous semble, sans aucune limite.

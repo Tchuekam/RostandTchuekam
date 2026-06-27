@@ -1,0 +1,145 @@
+ refine this prompt to match our current architecture You are a senior AI engineer. Your task is to deeply integrate Google Gemini and Tchuekam
+   (Hermes Agent) into DavCut so they can autonomously create, edit, and suggest improvements to videos — the user just describes what they want,
+   and the AI does the rest.
+
+   �� CORE VISION
+   The user should be able to:
+
+   Drop raw footage into DavCut
+   Type or speak a prompt like "Make me a 60-second cinematic travel reel with upbeat music and captions"
+   Press Generate and watch both AIs build the entire video automatically
+
+
+   �� HOW EACH AI CONTRIBUTES
+   TaskGeminiTchuekam (Hermes)Understand the user's prompt✅ Interprets creative intent✅ Breaks it into edit stepsAnalyze raw footage✅ Vision —
+   scans clips for best moments❌Select best clips✅ Scores and ranks clips by quality✅ Executes the selectionWrite captions/script✅ Generates
+   text, voiceover script❌Build the timeline❌✅ Assembles clips in orderApply filters & effects❌✅ Applies color grades, transitionsSuggest
+   improvements✅ Reviews draft and gives notes✅ Applies accepted suggestionsExport final video❌✅ Triggers export with settings
+
+   �� AUTOMATION PIPELINE
+   USER INPUT
+        │
+        ▼
+   [Gemini] ── Reads prompt + scans all footage thumbnails
+        │         → Scores each clip (0-100) for relevance
+        │         → Selects best moments with timestamps
+        │         → Writes caption text + mood tags
+        │
+        ▼
+   [Tchuekam/Hermes] ── Receives Gemini's edit plan as JSON
+        │         → Builds timeline: arranges clips in order
+        │         → Applies transitions between clips
+        │         → Adds captions to timeline
+        │         → Applies color grade based on mood tag
+        │         → Syncs cuts to music beat (if music provided)
+        │
+        ▼
+   [DRAFT VIDEO] ── Plays back in preview for user review
+        │
+        ▼
+   [Gemini] ── Reviews the draft
+        │         → Suggests: "Clip 3 feels too long, trim by 4s"
+        │         → Suggests: "Add a fade to black at the end"
+        │         → Suggests: "Caption on scene 2 is off-sync"
+        │
+        ▼
+   [USER] ── Accepts / Rejects each suggestion
+        │
+        ▼
+   [Tchuekam] ── Applies accepted changes instantly
+        │
+        ▼
+   [FINAL EXPORT] ──────────────────────────────────────────▶ ��
+
+   ✨ GEMINI'S SPECIFIC AUTOMATION POWERS
+
+   Footage Scanner: Feed every clip thumbnail + duration to Gemini Vision → it returns a ranked list of best moments with timestamps
+   Mood Detector: Gemini analyzes footage and assigns mood tags: cinematic, energetic, emotional, funny, documentary
+   Script Writer: Given a topic, Gemini writes a full voiceover script synced to clip duration
+   Caption Generator: Auto-generates and timestamps captions for every scene
+   Suggestion Engine: After a draft is built, Gemini reviews it and outputs structured suggestions:
+
+   json{
+     "suggestions": [
+       { "type": "trim", "clip": 3, "action": "trim_end", "by_seconds": 4 },
+       { "type": "transition", "between": [4, 5], "effect": "fade_black" },
+       { "type": "caption_sync", "clip": 2, "shift_ms": -300 },
+       { "type": "filter", "clip": 1, "apply": "warm_tone" }
+     ]
+   }
+
+   �� TCHUEKAM (HERMES) SPECIFIC AUTOMATION POWERS
+
+   Timeline Builder: Receives Gemini's clip selection plan and physically assembles the timeline
+   Beat Sync: Analyzes audio waveform and snaps cuts to music beats automatically
+   Batch Filter Applier: Applies the same color grade or effect across all clips in one command
+   Auto Silence Cutter: Scans audio track and removes all silent gaps automatically
+   Smart Renderer: Chooses optimal export settings based on content type (YouTube, Instagram Reels, TikTok)
+   Loop Runner: Can re-run the full pipeline with a new prompt without user restarting
+
+
+   ��️ UI: AI STUDIO MODE
+   Add a new "AI Studio" tab in DavCut's top bar:
+   ┌──────────────────────────────────────────────────────────────┐
+   │  �� AI STUDIO                                                │
+   ├──────────────────────────────────────────────────────────────┤
+   │                                                              │
+   │  �� Drop your raw footage here                               │
+   │                                                              │
+   │  ✏️  Describe your video:                                    │
+   │  ┌────────────────────────────────────────────────────────┐  │
+   │  │ "Make a 60s travel reel, cinematic, upbeat music..."   │  │
+   │  └────────────────────────────────────────────────────────┘  │
+   │                                                              │
+   │  �� Music: [ Upload ] or [ Auto-suggest ]                   │
+   │  �� Format: [ YouTube ] [ TikTok ] [ Instagram ] [ Custom ] │
+   │  ⏱️  Duration: [ Auto ] [ 30s ] [ 60s ] [ 3min ]            │
+   │                                                              │
+   │  ┌──────────────┐  ┌─────────────────┐                      │
+   │  │ ✨ Gemini    │  │ �� Tchuekam     │                      │
+   │  │ ● Connected  │  │ ● Connected      │                      │
+   │  └──────────────┘  └─────────────────┘                      │
+   │                                                              │
+   │  [        �� AUTO-GENERATE MY VIDEO        ]                 │
+   │                                                              │
+   ├──────────────────────────────────────────────────────────────┤
+   │  �� AI LOG (live feed):                                      │
+   │  ✅ Gemini scanned 12 clips → selected 7 best moments        │
+   │  ✅ Mood detected: Cinematic                                  │
+   │  ✅ Captions written for 7 scenes                            │
+   │  ⏳ Tchuekam building timeline...                            │
+   └──────────────────────────────────────────────────────────────┘
+
+   �� SUGGESTION PANEL (Post-Draft)
+   After the draft is built, show a Suggestions Panel:
+   ┌─────────────────────────────────────────────┐
+   │  ✨ Gemini's Suggestions                     │
+   ├─────────────────────────────────────────────┤
+   │  ⚠️  Clip 3 is too long — trim by 4 seconds  │
+   │  [ ✅ Apply ]  [ ❌ Skip ]                   │
+   ├─────────────────────────────────────────────┤
+   │  �� Add warm tone filter to opening clip     │
+   │  [ ✅ Apply ]  [ ❌ Skip ]                   │
+   ├─────────────────────────────────────────────┤
+   │  �� Caption on scene 2 is 300ms off-sync     │
+   │  [ ✅ Apply ]  [ ❌ Skip ]                   │
+   ├─────────────────────────────────────────────┤
+   │  [ ✅ Apply All ]    [ �� Re-analyze ]       │
+   └─────────────────────────────────────────────┘
+
+   ⚙️ TECHNICAL REQUIREMENTS
+
+   All AI processing runs async — live progress shown in AI Log
+   Gemini calls use Gemini 2.0 Flash (fast, vision-capable)
+   Tchuekam receives Gemini's output as a structured JSON edit plan
+   Every AI action is logged and undoable (Ctrl+Z works on AI edits)
+   Add a Manual Override button — user can always take over from AI at any point
+   AI Studio mode is non-destructive — original files are never modified
+
+
+   �� HARD RULES
+
+   AI must never auto-export without user pressing the Export button
+   Every AI timeline action must be visible in the undo history
+   Gemini Vision frame grabs are processed in memory only — never saved to disk
+   If either AI goes offline mid-process → pause and notify user, don't crash

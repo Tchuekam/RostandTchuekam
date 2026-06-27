@@ -1,0 +1,16 @@
+
+Configured AionUI successfully.
+
+What changed:
+
+Added AionUI provider tchuekam-gemini
+Set default Aion CLI model to gemini-2.5-pro
+Used the existing Gemini credential from Hermes .env
+Did not change Hermes terminal config or source code
+Verification:
+
+/api/providers now returns the configured provider
+aionrs.defaultModel now points to tchuekam-gemini / gemini-2.5-pro
+A direct AionUI aionrs test conversation replied: TChuekam AionUI direct answer works.
+I deleted the temporary test conversation afterward.
+If the browser still shows the old “No model configured” toast, refresh AionUI or start a new chat.
