@@ -64,7 +64,6 @@ ENV HERMES_HOME=/opt/data
 ENV PATH="/opt/hermes/.venv/bin:/opt/data/.local/bin:${PATH}"
 
 RUN mkdir -p /opt/data && chown hermes:hermes /opt/data
-VOLUME ["/opt/data"]
 
 # Copy config and env into the data dir
 COPY --chown=hermes:hermes config.yaml /opt/data/config.yaml
