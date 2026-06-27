@@ -1,6 +1,6 @@
 # Railway-optimized Dockerfile for Hermes Agent
 # Runs the gateway service with dashboard on a single port
-FROM ghcr.io/astral-sh/uv:0.11.6-python3.13-bookworm-slim AS uv_source
+FROM ghcr.io/astral-sh/uv:0.11.6-python3.13-trixie AS uv_source
 FROM node:22-bookworm-slim AS node_source
 
 FROM debian:bookworm-slim
@@ -28,22 +28,22 @@ RUN ln -sf /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm && 
 WORKDIR /opt/hermes
 
 # Copy hermes-agent source
-COPY hermes-agent/package.json hermes-agent/package-lock.json ./
-COPY hermes-agent/web/package.json web/
-COPY hermes-agent/ui-tui/package.json ui-tui/
-COPY hermes-agent/ui-tui/packages/hermes-ink/ ui-tui/packages/hermes-ink/
+COPY Tchuekam-Agent-main/hermes-agent-main/package.json Tchuekam-Agent-main/hermes-agent-main/package-lock.json ./
+COPY Tchuekam-Agent-main/hermes-agent-main/web/package.json web/
+COPY Tchuekam-Agent-main/hermes-agent-main/ui-tui/package.json ui-tui/
+COPY Tchuekam-Agent-main/hermes-agent-main/ui-tui/packages/hermes-ink/ ui-tui/packages/hermes-ink/
 
 ENV npm_config_install_links=false
 RUN npm install --prefer-offline --no-audit && \
     npm cache clean --force
 
 # Python deps
-COPY hermes-agent/pyproject.toml hermes-agent/uv.lock ./
+COPY Tchuekam-Agent-main/hermes-agent-main/pyproject.toml Tchuekam-Agent-main/hermes-agent-main/uv.lock ./
 RUN touch ./README.md
 RUN uv sync --frozen --no-install-project --extra all --extra messaging --extra anthropic --extra bedrock --extra azure-identity
 
 # Source code
-COPY hermes-agent/ .
+COPY Tchuekam-Agent-main/hermes-agent-main/ .
 
 # Build web UI and TUI
 RUN cd web && npm run build && \
