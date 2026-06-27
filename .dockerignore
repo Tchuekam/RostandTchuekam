@@ -39,18 +39,17 @@ prefill.json
 # Binaries
 *.exe
 
-# Hermes-agent internal ignores
-hermes-agent/.git
-hermes-agent/node_modules
-hermes-agent/**/node_modules
-hermes-agent/.venv
-hermes-agent/**/.venv
-hermes-agent/data/
-hermes-agent/ui-tui/dist/
-hermes-agent/ui-tui/packages/hermes-ink/dist/
-hermes-agent/.github
-hermes-agent/.env
+# Hermes-agent internal ignores (updated to match current directory structure)
+Tchuekam-Agent-main/hermes-agent-main/.git
+Tchuekam-Agent-main/hermes-agent-main/node_modules
+Tchuekam-Agent-main/hermes-agent-main/**/node_modules
+Tchuekam-Agent-main/hermes-agent-main/.venv
+Tchuekam-Agent-main/hermes-agent-main/**/.venv
+Tchuekam-Agent-main/hermes-agent-main/data/
+Tchuekam-Agent-main/hermes-agent-main/ui-tui/dist/
+Tchuekam-Agent-main/hermes-agent-main/ui-tui/packages/hermes-ink/dist/
+Tchuekam-Agent-main/hermes-agent-main/.github
+Tchuekam-Agent-main/hermes-agent-main/.env
 
 # Duplicate agent dirs (not needed for deployment)
-Tchuekam-Agent-main/
 Tchuekam-agent-secure/
